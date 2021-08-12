@@ -39,9 +39,13 @@ export const NavLogo = styled(LinkR)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+
+    &:focus {
+        outline: thin dotted;
+    }
 `;
 
-export const MobileIcon = styled.div`
+export const MobileIcon = styled.div<{onClick:Function}>`
     display: none;
 
     @media screen and (max-width: 768px) {
@@ -102,7 +106,7 @@ export const NavBtnLink = styled(LinkR)`
     padding: 10px 22px;
     color: #010606;
     font-size: 16px;
-    outline: 0;
+    outline: thin dotted;
     border: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;

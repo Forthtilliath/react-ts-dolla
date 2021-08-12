@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter } from 'react-router-dom';
+import Home from './pages/Home';
 
 const App: FC = () => {
     return (
         <div className="App">
             <BrowserRouter>
-                <Navbar />
+                <Home />
             </BrowserRouter>
         </div>
     );
