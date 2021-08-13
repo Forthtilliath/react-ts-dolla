@@ -15,28 +15,18 @@ import {
 } from './InfoElements';
 
 interface Props {
-    id: string,
-    topLine: string,
-    headLine: string,
-    description: string,
-    buttonLabel: string,
-    imgStart: boolean,
-    img: string,
-    alt: string,
-    dark: boolean,
+    id: string;
+    topLine: string;
+    headLine: string;
+    description: string;
+    buttonLabel: string;
+    imgStart: boolean;
+    img: string;
+    alt: string;
+    dark: boolean;
 }
 
-const InfoSection = ({
-    id,
-    topLine,
-    headLine,
-    description,
-    buttonLabel,
-    imgStart,
-    img,
-    alt,
-    dark,
-}: Props) => {
+const InfoSection = ({ id, topLine, headLine, description, buttonLabel, imgStart, img, alt, dark }: Props) => {
     return (
         <InfoContainer id={id} dark={dark}>
             <InfoWrapper>
