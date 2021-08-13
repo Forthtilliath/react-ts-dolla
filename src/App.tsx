@@ -1,20 +1,18 @@
-import { FC } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
+import Footer from './components/Footer/Footer';
 
-const App: FC = () => {
+const App = () => {    
     return (
-        <div className="App">
-            <BrowserRouter>
-                <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/signin" exact component={SignIn} />
-                </Switch>
-                <Home />
-            </BrowserRouter>
-        </div>
+        <BrowserRouter>
+            <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/signin" exact component={SignIn} />
+            </Switch>
+            <Footer />
+        </BrowserRouter>
     );
 };
 

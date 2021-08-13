@@ -5,14 +5,13 @@ interface Props {
     big?: boolean;
     dark?: boolean;
     fontBig?: boolean;
-    exact?: string;
+    // exact?: string;
 }
 
 const StyledLink = styled(({ dark, big, fontBig, ...props }) => <Link {...props} />)`
     // Laisser les back quotes sinon y'a une erreur
 `;
 
-// export const Button = styled(Link)<Props>`
 export const Button = styled(StyledLink)<Props>`
     border-radius: 50px;
     background-color: ${({ dark }) => (dark ? '#01bf71' : '#010606')};

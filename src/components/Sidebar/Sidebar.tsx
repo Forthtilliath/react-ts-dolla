@@ -39,7 +39,7 @@ const Sidebar = (props: Props) => {
                 </SidebarMenu>
             </SidebarWrapper>
             <SideBtnWrap>
-                <SidebarRoute to="/signin">Sign In</SidebarRoute>
+                <SidebarRoute onClick={toggle} to="/signin">Sign In</SidebarRoute>
             </SideBtnWrap>
         </SidebarContainer>
     );
