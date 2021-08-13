@@ -11,8 +11,8 @@ const Home = () => {
 
     const toggle = () => setIsOpen(!isOpen);
 
-    let sections = homeObjs.map(homeObj => <InfoSection {...homeObj} />);
-    sections.splice(2, 0, <Services />);
+    const sections = homeObjs.map(homeObj => <InfoSection key={homeObj.id} {...homeObj} />);
+    sections.splice(2, 0, <Services key="services" />);
 
     return (
         <>

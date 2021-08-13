@@ -21,7 +21,7 @@ interface Props {
     description: string,
     buttonLabel: string,
     imgStart: boolean,
-    img: any,
+    img: string,
     alt: string,
     dark: boolean,
 }

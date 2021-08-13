@@ -2,13 +2,10 @@ import styled from 'styled-components';
 
 interface Props {
     dark?: boolean,
-    // lightBg?: boolean,
-    // lightText?: boolean,
     imgStart?: boolean,
 }
 
 export const InfoContainer = styled.div<Props>`
-    /* color: #fff; */
     background-color: ${({ dark }) => (dark ? '#010606' : '#f9f9f9')};
 
     @media screen and (max-width: 768px) {

@@ -2,13 +2,18 @@ import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
 interface Props {
-    big?: boolean,
-    dark?: boolean,
-    fontBig?: boolean,
-    exact?: string,
+    big?: boolean;
+    dark?: boolean;
+    fontBig?: boolean;
+    exact?: string;
 }
 
-export const Button = styled(Link)<Props>`
+const StyledLink = styled(({ dark, big, fontBig, ...props }) => <Link {...props} />)`
+    // Laisser les back quotes sinon y'a une erreur
+`;
+
+// export const Button = styled(Link)<Props>`
+export const Button = styled(StyledLink)<Props>`
     border-radius: 50px;
     background-color: ${({ dark }) => (dark ? '#01bf71' : '#010606')};
     white-space: nowrap;
@@ -24,7 +29,7 @@ export const Button = styled(Link)<Props>`
     transition: all 0.1s ease-in-out;
 
     &:focus {
-    outline: thin dotted;
+        outline: thin dotted;
     }
 
     &:hover {
