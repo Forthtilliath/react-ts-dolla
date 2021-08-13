@@ -5,7 +5,7 @@ interface Props {
     big?: boolean,
     dark?: boolean,
     fontBig?: boolean,
-    exact?: boolean,
+    exact?: string,
 }
 
 export const Button = styled(Link)<Props>`

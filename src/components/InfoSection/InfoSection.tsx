@@ -52,7 +52,7 @@ const InfoSection = ({
                                     smooth={true}
                                     duration={500}
                                     spy={true}
-                                    exact={true}
+                                    exact="true"
                                     offset={-80}
                                     dark={dark}
                                 >
