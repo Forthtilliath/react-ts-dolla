@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 interface Props {
-    lightBg?: boolean;
-    lightText?: boolean;
-    imgStart?: boolean;
+    dark?: boolean,
+    // lightBg?: boolean,
+    // lightText?: boolean,
+    imgStart?: boolean,
 }
 
 export const InfoContainer = styled.div<Props>`
-    color: #fff;
-    background-color: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')};
+    /* color: #fff; */
+    background-color: ${({ dark }) => (dark ? '#010606' : '#f9f9f9')};
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
@@ -70,7 +71,7 @@ export const Heading = styled.h1<Props>`
     font-size: 48px;
     line-height: 1.1;
     font-weight: 600;
-    color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
+    color: ${({ dark }) => (dark ? '#f7f8fa' : '#010606')};
 
     @media screen and (max-width: 480px) {
         font-size: 32px;
@@ -82,7 +83,7 @@ export const Subtitle = styled.p<Props>`
     margin-bottom: 35px;
     font-size: 18px;
     line-height: 24px;
-    color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
+    color: ${({ dark }) => (dark ? '#f7f8fa' : '#010606')};
 `;
 
 export const BtnWrap = styled.div`

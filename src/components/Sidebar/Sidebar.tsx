@@ -10,8 +10,8 @@ import {
 } from './SidebarElements';
 
 interface Props {
-    isOpen: boolean;
-    toggle: Function;
+    isOpen: boolean,
+    toggle: Function,
 }
 
 const Sidebar = (props: Props) => {

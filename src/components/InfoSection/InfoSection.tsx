@@ -15,24 +15,19 @@ import {
 } from './InfoElements';
 
 interface Props {
-    id: string;
-    lightBg: boolean;
-    lightText: boolean;
-    topLine: string;
-    headLine: string;
-    description: string;
-    buttonLabel: string;
-    imgStart: boolean;
-    img: any;
-    alt: string;
-    dark: boolean;
-    primary: boolean;
+    id: string,
+    topLine: string,
+    headLine: string,
+    description: string,
+    buttonLabel: string,
+    imgStart: boolean,
+    img: any,
+    alt: string,
+    dark: boolean,
 }
 
 const InfoSection = ({
     id,
-    lightBg,
-    lightText,
     topLine,
     headLine,
     description,
@@ -41,26 +36,24 @@ const InfoSection = ({
     img,
     alt,
     dark,
-    primary,
 }: Props) => {
     return (
-        <InfoContainer id={id} lightBg={lightBg}>
+        <InfoContainer id={id} dark={dark}>
             <InfoWrapper>
                 <InfoRow imgStart={imgStart}>
                     <Colum1>
                         <TextWrapper>
                             <TopLine>{topLine}</TopLine>
-                            <Heading lightText={lightText}>{headLine}</Heading>
-                            <Subtitle lightText={lightText}>{description}</Subtitle>
+                            <Heading dark={dark}>{headLine}</Heading>
+                            <Subtitle dark={dark}>{description}</Subtitle>
                             <BtnWrap>
                                 <Button
                                     to="home"
                                     smooth={true}
                                     duration={500}
                                     spy={true}
-                                    // exact="true"
+                                    exact={true}
                                     offset={-80}
-                                    primary={primary}
                                     dark={dark}
                                 >
                                     {buttonLabel}
