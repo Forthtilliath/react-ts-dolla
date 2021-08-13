@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 interface Props {
-    dark?: boolean,
-    imgStart?: boolean,
+    dark?: boolean;
+    imgStart?: boolean;
 }
 
 export const InfoContainer = styled.div<Props>`
