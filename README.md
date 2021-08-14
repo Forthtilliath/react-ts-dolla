@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce projet fait référence à la vidéo suivante : [React Website using Styled Components and Smooth Scroll](https://www.youtube.com/watch?v=Nl54MJDR2p8).
 
-## Available Scripts
+Comme son nom l'indique, ce projet utilise Styled Components, ce qui est l'occasion de pratiquer cette bibliothèque.
 
-In the project directory, you can run:
+De plus, ce projet utilise les Smooth Scroll. Sachant l'utiliser sur un site HTML/CSS, ce projet est l'occasion de découvrir comment cela est géré avec Réact.
 
-### `yarn start`
+Le projet n'étant pas un très gros projet, j'ai pris la décision de la faire avec le template Typescript.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Difficultées rencontrées
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Rien de surprenant, mes difficultés ont été au niveau de Typescript, même si il n'y avait que très peu de modifications à apporter par rapport au code de base. 
 
-### `yarn test`
+La première des difficultés était de réussir à passer des props à un Style Components sans avoir de message d'erreur.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![props](./screenshots/props.png)
 
-### `yarn build`
+Afin de réussir à passer des props au Styled Component, j'ai déclaré une interface Props afin de typer les propriétés reçues. Toutefois, dans le cas où il n'y ait qu'une propriété, l'utilisation d'une interface n'est pas utile. Bien que dans le cas actuel non plus, c'est surtout une question de comfort et d'élégance du code.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Cependant, pour les Styled Components d'Element JSX, cette méthode ne fonctionnait pas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![StyledLink](./screenshots/styledlink.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+En utilisant une déclaration intermédiaire afin de partitionner les props, j'ai pu corriger le problème. Cela me permet d'envoyer seulement les props de Link à Link et de conserver les autres pour mon css.
