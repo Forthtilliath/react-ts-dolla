@@ -7,6 +7,7 @@ interface Props {
 
 export const InfoContainer = styled.div<Props>`
     background-color: ${({ dark }) => (dark ? '#010606' : '#f9f9f9')};
+    scroll-snap-align: start;
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
@@ -17,7 +18,7 @@ export const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
     min-height: 860px;
-    height: calc(100vh - 80px);
+    height: 100vh;
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;

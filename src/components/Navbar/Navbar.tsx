@@ -20,9 +20,10 @@ interface Props {
 
 const Navbar = ({ toggle }: Props) => {
     const [scrollNav, setScrollNav] = useState(false);
+    const root = document.querySelector('#root');
 
     const changeNav = () => {
-        if (window.scrollY >= 80) {
+        if (root && root?.scrollTop >= 80) {
             setScrollNav(true);
         } else {
             setScrollNav(false);
@@ -30,9 +31,10 @@ const Navbar = ({ toggle }: Props) => {
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', changeNav);
+        root?.addEventListener('scroll', changeNav);
 
-        return () => window.removeEventListener('scroll', changeNav);
+        return () => root?.removeEventListener('scroll', changeNav);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const toggleHome = () => {

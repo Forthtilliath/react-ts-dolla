@@ -6,3 +6,13 @@
     box-sizing: border-box;
     font-family: 'Encode Sans Expanded', sans-serif;
 }
+
+body {
+    overflow: hidden;
+}
+
+#root {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
