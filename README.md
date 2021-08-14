@@ -45,6 +45,13 @@ Le problème avec tout cela, c'est que la scrollbar n'était plus sur body, mais
 
 De la sorte, mon event au scroll fonctionne à présent sur root et se base sur `element.scrollTop` plutôt que `window.scrollY`.
 
+Mais cela n'était pas sans oublier que la navigation sur le page ne fonctionnait plus. Le scroll n'était plus sur window, il me fallait définir un container pour les éléments Link de `react-scroll`. Pour cela, j'ai ajouté `containerId="root"` sur mes liens pour faire de mon root, le container de mes liens (car c'est lui qui a le scrollbar).
+
+Mais, la navigation n'était plus smooth ! Par chance, un simple `scroll-behavior: smooth;` sur root a corrigé le problème.
+
+Enfin, comme les liens avaient une ``duration`` avec `react-scroll`, cela m'étais un temps avant de faire le déplacement. J'ai donc du réinitialiser les durées :<br>
+![reactscrolllink](./screenshots/react-scroll-link.png)
+
 # Ce que m'a apporté ce projet
 
 ## Styled Components

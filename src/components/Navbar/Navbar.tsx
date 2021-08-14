@@ -39,6 +39,7 @@ const Navbar = ({ toggle }: Props) => {
 
     const toggleHome = () => {
         scroll.scrollToTop();
+        root?.scrollTo(0, 0);
     };
 
     return (
@@ -56,10 +57,12 @@ const Navbar = ({ toggle }: Props) => {
                             <NavLinks
                                 to="about"
                                 smooth={true}
-                                duration={500}
+                                duration={0}
+                                delai={0}
                                 spy={true}
                                 exact="true"
                                 offset={-80}
+                                containerId="root"
                                 activeClass="active"
                             >
                                 About
@@ -69,10 +72,12 @@ const Navbar = ({ toggle }: Props) => {
                             <NavLinks
                                 to="discover"
                                 smooth={true}
-                                duration={500}
+                                duration={0}
+                                delai={0}
                                 spy={true}
                                 exact="true"
                                 offset={-80}
+                                containerId="root"
                                 activeClass="active"
                             >
                                 Discover
@@ -82,10 +87,12 @@ const Navbar = ({ toggle }: Props) => {
                             <NavLinks
                                 to="services"
                                 smooth={true}
-                                duration={500}
+                                duration={0}
+                                delai={0}
                                 spy={true}
                                 exact="true"
                                 offset={-80}
+                                containerId="root"
                                 activeClass="active"
                             >
                                 Services
@@ -95,10 +102,12 @@ const Navbar = ({ toggle }: Props) => {
                             <NavLinks
                                 to="signup"
                                 smooth={true}
-                                duration={500}
+                                duration={0}
+                                delai={0}
                                 spy={true}
                                 exact="true"
                                 offset={-80}
+                                containerId="root"
                                 activeClass="active"
                             >
                                 Sign Up

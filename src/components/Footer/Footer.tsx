@@ -17,8 +17,10 @@ import {
 } from './FooterElements';
 
 const Footer = () => {
+    const root = document.querySelector('#root');
     const toggleHome = () => {
         scroll.scrollToTop();
+        root?.scrollTo(0, 0);
     };
 
     return (
