@@ -1,3 +1,7 @@
+# Dolla
+
+![License](https://img.shields.io/github/license/forthtilliath/react-ts-dolla?style=for-the-badge) [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/) [![Styled Components](https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)](https://styled-components.com/) ![TypeScript](https://img.shields.io/badge/-TypeScript-blue?logo=typescript&logoColor=white&style=for-the-badge)
+
 # Introduction
 
 Ce projet fait référence à la vidéo suivante : [React Website using Styled Components and Smooth Scroll](https://www.youtube.com/watch?v=Nl54MJDR2p8).
